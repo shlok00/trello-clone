@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 .List {
-  background: #dfe3e6;
+  background: #7357ab;
   flex-shrink: 0;
   width: 272px;
   height: fit-content;
@@ -13,12 +14,15 @@
   cursor: pointer;
   padding: 10px;
   overflow-wrap: break-word;
+  color: white;
+  font-family: 'Permanent Marker';
 }
 
 .Toggle-Add-Card {
   cursor: pointer;
   padding: 10px;
-  color: #6b808c;
+  color: #fff;
+  font-family: 'Permanent Marker';
   border-radius: 0 0 10px 10px;
   display: flex;
   align-items: center;
