@@ -6,7 +6,7 @@ export default store => {
 
   store.dispatch({
     type: "ADD_LIST",
-    payload: { listId: firstListId, listTitle: "First list" }
+    payload: { listId: firstListId, listTitle: "TASK QUEUE" }
   });
 
   store.dispatch({
@@ -32,7 +32,7 @@ export default store => {
 
   store.dispatch({
     type: "ADD_LIST",
-    payload: { listId: secondListId, listTitle: "Second list" }
+    payload: { listId: secondListId, listTitle: "IN PROGRESS" }
   });
 
   store.dispatch({
@@ -48,6 +48,32 @@ export default store => {
     type: "ADD_CARD",
     payload: {
       listId: secondListId,
+      cardId: shortid.generate(),
+      cardText: "Card 2"
+    }
+  });
+
+  console.log("Insert Third list");
+  const thirdListId = shortid.generate();
+
+  store.dispatch({
+    type: "ADD_LIST",
+    payload: { listId: thirdListId, listTitle: "COMPLETED" }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: thirdListId,
+      cardId: shortid.generate(),
+      cardText: "Card 1"
+    }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: thirdListId,
       cardId: shortid.generate(),
       cardText: "Card 2"
     }
